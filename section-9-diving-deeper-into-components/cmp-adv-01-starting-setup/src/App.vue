@@ -3,9 +3,9 @@
     <TheHeader />
     <button @click="setSelectedComponent('ActiveGoals')">Active Goals</button>
     <button @click="setSelectedComponent('ManageGoals')">Manage Goals</button>
-    <!-- <ActiveGoals v-if="selectedComponent === 'ActiveGoals'"/> -->
-    <!-- <ManageGoals v-if="selectedComponent === 'ManageGoals'"/> -->
-    <component :is="selectedComponent"></component>
+    <keep-alive>
+      <component :is="selectedComponent"></component>
+    </keep-alive>
   </div>
 </template>
 
